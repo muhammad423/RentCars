@@ -55,13 +55,19 @@ const SearchBar = () => {
           className="md:flex w-full items-center gap-5"
           onSubmit={handleSearch}
         >
-          <div className="">
+          <div className="flex items-center justify-center gap-3">
             <CarManifacturelar
               manifacture={manifacture}
               setManifacture={setManifacture}
             />
+             <button
+              type="submit"
+              className="p-1 mt-2 rounded-sm md:hidden block bg-[#3E977C] text-white"
+            >
+              search
+            </button>
           </div>
-          <div className="mt-2 flex items-center gap-3">
+          <div className="mt-2 flex items-center justify-center gap-3">
             <input
               type="text"
               className="w-full rounded-md border-0 bg-white py-1.5 pl-3 pr-10 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-[#3E977C] sm:text-sm sm:leading-6"
@@ -71,7 +77,7 @@ const SearchBar = () => {
             />
             <button
               type="submit"
-              className="p-1 rounded-sm hidden md:block bg-[#3E977C] text-white"
+              className="p-1 rounded-sm bg-[#3E977C] text-white"
             >
               search
             </button>
